@@ -8,19 +8,18 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-// const createDate = null;
-const createDate = (newData, index) => {
+const createDate = (newData, idx) => {
   const sortDate = [];
   for (let i = 0; i < newData.length; i++) {
     const result = (new Date(newData[i]).getTime() / 1000).toString();
     sortDate.push(result);
   }
-  if (index === undefined) {
+  if (idx === undefined) {
     sortDate.sort((a, b) => a - b);
     return sortDate.join(' - ');
   } else {
     sortDate.sort((a, b) => a + b);
-    return sortDate[index];
+    return sortDate[idx];
   }
 };
 
